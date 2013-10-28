@@ -9,6 +9,10 @@ public class WeatherService {
 	private YahooRetriever yahooRetriever;
 	private YahooParser yahooParser;
 
+    private NCDCRetriever ncdcRetriever;
+    private NCDCParser ncdcParser;
+
+
 	public WeatherService() {
 	}
 
@@ -21,6 +25,19 @@ public class WeatherService {
 
 		return weather;
 	}
+
+
+    public Weather retrieveForecast(String city, String code){
+        //Retrieve Data
+        InputStream dataIn = ncdcRetriever.retrieve(city, code);
+
+        // Parse DataS
+        Weather weather = ncdcParser.parse(city, dataIn);
+
+        return weather;
+
+    }
+
 
 	public YahooRetriever getYahooRetriever() {
 		return yahooRetriever;
