@@ -13,7 +13,8 @@ public class WeatherService {
     private NCDCParser ncdcParser;
 
 
-	public WeatherService() {
+
+    public WeatherService() {
 	}
 
 	public Weather retrieveForecast(String zip) throws Exception {
@@ -27,12 +28,12 @@ public class WeatherService {
 	}
 
 
-    public Weather retrieveForecast(String city, String code){
+    public Weather retrieveForecast(String datasetId, String stationId, String startDate, String endDate)  throws Exception {
         //Retrieve Data
-        InputStream dataIn = ncdcRetriever.retrieve(city, code);
+        InputStream dataIn = ncdcRetriever.retrieve(datasetId, stationId, startDate, endDate);
 
         // Parse DataS
-        Weather weather = ncdcParser.parse(city, dataIn);
+        Weather weather = ncdcParser.parse(stationId, dataIn);
 
         return weather;
 
@@ -54,5 +55,21 @@ public class WeatherService {
 	public void setYahooParser(YahooParser yahooParser) {
 		this.yahooParser = yahooParser;
 	}
+
+    public NCDCRetriever getNcdcRetriever() {
+        return ncdcRetriever;
+    }
+
+    public void setNcdcRetriever(NCDCRetriever ncdcRetriever) {
+        this.ncdcRetriever = ncdcRetriever;
+    }
+
+    public NCDCParser getNcdcParser() {
+        return ncdcParser;
+    }
+
+    public void setNcdcParser(NCDCParser ncdcParser) {
+        this.ncdcParser = ncdcParser;
+    }
 
 }
