@@ -9,7 +9,6 @@
     <name>jProAct root</name>
 
     <modules>
-        <module>jproact-core</module>
         <module>jproact-parent</module>
     </modules>
  </project>
