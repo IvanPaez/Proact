@@ -17,8 +17,8 @@
         <module>jproact-model</module>
         <module>jproact-weather</module>
         <module>jproact-persist</module>
-        <module>jproact-jpmml</module>
         <module>jproact-webapp</module>
+        <module>jproact-jpmml</module>
     </modules>
     <build>
         <pluginManagement>
