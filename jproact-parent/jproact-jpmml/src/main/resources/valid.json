@@ -1,0 +1,9 @@
+{
+	"results": {
+		"station":"GHCND:USW00093037",
+		"value":248,
+		"attributes":"C",
+		"datatype":"HLY-TEMP-NORMAL",
+		"date":"2010-01-01"
+		}
+}
