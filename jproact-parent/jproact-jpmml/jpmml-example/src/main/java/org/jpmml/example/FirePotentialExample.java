@@ -1,5 +1,7 @@
 /*
- * Copyright (c) 2011 University of Tartu
+ * Copyright (c) 2013 Université de Rennes 1, France
+ * Author: Ivan Paez ivan.paez_anaya@irisa.fr
+ *
  */
 package org.jpmml.example;
 
