@@ -1,8 +1,7 @@
 /*
  * Copyright (c) 2013 University of Tartu
- *
  */
-package org.jproact.jpmml;
+package org.jpmml.example;
 
 import com.beust.jcommander.*;
 

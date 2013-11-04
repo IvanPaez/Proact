@@ -1,8 +1,7 @@
 /*
  * Copyright (c) 2011 University of Tartu
- * Edited by Ivan P.
  */
-package org.jproact.jpmml;
+package org.jpmml.example;
 
 import java.io.*;
 
