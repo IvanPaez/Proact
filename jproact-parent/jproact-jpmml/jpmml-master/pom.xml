@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.jproact</groupId>
+        <artifactId>jproact-jpmml</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jpmml-master</artifactId>
+    <packaging>pom</packaging>
+    <name>JPMML</name>
+    <description>Java API for managing and evaluating models in Predictive Model Markup Language (PMML)</description>
+    <url>http://www.jpmml.org</url>
+
+    <organization>
+        <name>University of Tartu</name>
+        <url>http://www.ut.ee/en</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>New BSD License</name>
+            <url>http://www.opensource.org/licenses/bsd-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>villu.ruusmann</id>
+            <name>Villu Ruusmann</name>
+        </developer>
+        <developer>
+            <id>sulev.sild</id>
+            <name>Sulev Sild</name>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>bundle</module>
+        <module>pmml-evaluator</module>
+        <module>pmml-knime</module>
+        <module>pmml-manager</module>
+        <module>pmml-model</module>
+        <module>pmml-rapidminer</module>
+        <module>pmml-rattle</module>
+        <module>pmml-schema</module>
+        <module>xjc</module>
+    </modules>
+
+    <scm>
+        <connection>scm:git:git@github.com:jpmml/jpmml.git</connection>
+        <developerConnection>scm:git:git@github.com:jpmml/jpmml.git</developerConnection>
+        <url>git://github.com/jpmml/jpmml.git</url>
+        <tag>HEAD</tag>
+    </scm>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/jpmml/jpmml/issues</url>
+    </issueManagement>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-evaluator</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-evaluator</artifactId>
+                <type>test-jar</type>
+                <version>1.0-SNAPSHOT</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-manager</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-model</artifactId>
+                <type>test-jar</type>
+                <version>1.0-SNAPSHOT</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>pmml-schema</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jpmml</groupId>
+                <artifactId>xjc</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>15.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.4</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
