@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013 Université de Rennes 1, France
  * Author: Ivan Paez ivan.paez_anaya@irisa.fr
- *
+ * Date: Nov. 6, 2013
  */
 package org.jpmml.example;
 
